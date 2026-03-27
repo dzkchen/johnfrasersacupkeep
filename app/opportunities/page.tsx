@@ -117,8 +117,8 @@ const Page = () => {
   return (
     <main className='overflow-hidden'>
       <div
-        className='custom-background-4 flex flex-col justify-center items-center text-center py-30 pt-10'
-        style={{ height: '50.3333vh' }}
+        className='custom-background-4 flex flex-col justify-center items-center text-center px-4 pt-44 pb-20 lg:pt-52'
+        style={{ minHeight: '50.3333vh' }}
       >
         <div className='container w-11/12 text-white' data-aos="fade-up">
           <h1 className='font-bold lg:text-6xl text-[40px] mb-10'>SAC Opportunities</h1>
