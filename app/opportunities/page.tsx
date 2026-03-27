@@ -1,4 +1,4 @@
-'use client'; // Ensures this component is client-side rendered.
+'use client';
 
 import React from 'react';
 import CountingAnimation from '@/components/Counting';
@@ -17,14 +17,30 @@ interface Opportunity {
 const OPPORTUNITIES: Opportunity[] = [
   {
     id: 1,
+    title: 'Charity Week',
+    date: 'Apr 27 - May 1, 2026',
+    description: 'TBD',
+    imageSrc: '/opportunities/charityweek.jpg',
+    imageAlt: 'Charity Week',
+  },
+  {
+    id: 2,
+    title: 'Easter Egg Hunt',
+    date: 'TBD',
+    description: 'TBD',
+    imageSrc: '',
+    imageAlt: 'TBD',
+  },
+  {
+    id: 3,
     title: 'Fraser Games',
     date: 'March 9th-13th, 2026',
-    description: 'Get ready Jags!!! Fraser games is happening soon, a competition of rivalary and collaboration to try to score the most points throughout a week long event! Compete for the Fraser Champions title and a special prize. Sign-ups open Monday, March 2nd so don’t miss it. Let the games begin!',
+    description: 'What a week, Jags! Fraser Games was a massive success, bringing rivalry and collaboration together as teams scored points throughout the event. There was a fierce competition to see who could win it all during the many games throughout the school. Congratulations to our new Fraser Champions!',
     imageSrc: '/opportunities/frasergames.jpg',
     imageAlt: 'Fraser Games',
   },
   {
-    id: 2,
+    id: 4,
     title: 'Semi-Formal',
     date: 'Feb 12, 2026',
     description: 'This year SAC has delivered one of the cheapest semi-formals in fraser’s recent history! It was a amazing night of food, photos and dancing! Thank you to everyone who came and made this winter night one to remember. So much love, laughter, and unforgettable moments!',
@@ -32,7 +48,7 @@ const OPPORTUNITIES: Opportunity[] = [
     imageAlt: 'Semi Formal',
   },
   {
-    id: 3,
+    id: 5,
     title: 'Snowy Cinema x Winter Food Drive',
     date: 'Dec 18, 2025',
     description: 'The break is upon us Jags! SAC x FAC brought the student body a buyout they never expected! In P3, FAC ran a Student vs Teacher volleyball spirit rally while SAC ran the P4 movie screening the Grinch! We raised over $1500 for charity through this buyout in the name of the holiday spirit, great job! On top of that, SAC raised more money than ever before for our winter food drive where classes competed to see which homeroom could raise the most money/canned goods for our local food bank!',
@@ -40,7 +56,7 @@ const OPPORTUNITIES: Opportunity[] = [
     imageAlt: 'Festive Photobooth',
   },
   {
-    id: 4,
+    id: 6,
     title: 'Twinkle Links',
     date: 'December 2025',
     description: 'Look around our school! All of a sudden, bright festive lights everywhere! Students found their names and submitted the pictures for a chance to enter a raffle.',
@@ -48,7 +64,7 @@ const OPPORTUNITIES: Opportunity[] = [
     imageAlt: 'Twinkle Links',
   },
   {
-    id: 5,
+    id: 7,
     title: 'TSMS Workshop',
     date: 'Dec 4, 2025',
     description: 'SAC wrapped up the TSMS Grade 8 leadership workshop! Finally bringing it back after a long awaited time. We had a blast presenting, running activities and celebrating with our future Jags!',
@@ -56,7 +72,7 @@ const OPPORTUNITIES: Opportunity[] = [
     imageAlt: 'TSMS Workshop',
   },
   {
-    id: 6,
+    id: 8,
     title: 'Mosaic Lunch',
     date: 'Nov 27, 2025',
     description: 'The most exciting cultural event of the year at John Fraser, Mosaic Lunch, brought the whole school together in the cafeteria for cultural booths and performances. It was a chance for everyone to experience our diverse heritage, passion, and talent through delicious food, traditional crafts, and unique performances. Students also wore traditional attire to proudly showcase their cultural heritage. Through this event, we raised over $1000 for families in need through the Peel Winter Caring Program. Great Job Fraser!',
@@ -64,7 +80,7 @@ const OPPORTUNITIES: Opportunity[] = [
     imageAlt: 'Mosaic lunch',
   },
   {
-    id: 7,
+    id: 9,
     title: 'SAC Retreat',
     date: 'Nov 17, 2025',
     description: 'On this day, the council went on a retreat for team bonding out in YMCA collecting memories far more memorable than planned! There were lots of fun activities like tree top trekking, archery and lots of eating!',
@@ -72,7 +88,7 @@ const OPPORTUNITIES: Opportunity[] = [
     imageAlt: 'Retreat',
   },
   {
-    id: 8,
+    id: 10,
     title: 'Fraser Fear Fest/Fear Week',
     date: 'Oct 28, 2025',
     description: 'Something spooky is going on… Fraser Fear Fest! SAC’s brand new Halloween event where we took the initiative to create a large scale event early in the year. It was a blast seeing everyone enjoy the inflatables, haunted maze, booths, movies and snacks! Thank you so much to FAC, Visual Arts Club, AV club, Arts Council and Fraser Chefs for running booths and supporting the event! We hit over 360 attendees for this event!',
@@ -80,7 +96,7 @@ const OPPORTUNITIES: Opportunity[] = [
     imageAlt: 'Fear Fest',
   },
   {
-    id: 9,
+    id: 11,
     title: 'Senior Sunrise',
     date: 'Oct 17, 2025',
     description: 'Thank you so much to all the seniors who came to the senior sunrise event! It was a great time seeing the majority of our graduating class come together, good luck on your post secondary planning and studying!',
@@ -88,7 +104,7 @@ const OPPORTUNITIES: Opportunity[] = [
     imageAlt: 'Senior Sunrise',
   },
   {
-    id: 10,
+    id: 12,
     title: 'Club Promo Lunch',
     date: 'Oct 6-7, 2025',
     description: 'Thank you to all who came and took part in Club Promo Lunch! We’re so proud to see all the clubs show off their creativity and spirit this year.',
@@ -96,7 +112,7 @@ const OPPORTUNITIES: Opportunity[] = [
     imageAlt: 'CPL',
   },
   {
-    id: 11,
+    id: 13,
     title: 'Terry Fox',
     date: 'Sept 26, 2025',
     description: 'For Terry Fox, SAC fired up a “Heat for Hope” BBQ to support the food drive, while also debuting our brand-new tap machines that will power most of our future events! Thanks to everyone’s support, we raised $3,710.40 for the Terry Fox Foundation. Way to go, Jags! And it didn’t stop there: SAC and FAC teamed up to run a hugely successful Terry Fox Walk, and we wrapped it all up with a week long Terry Fox themed trivia game, complete with five individual prizes up for grabs.',
@@ -104,7 +120,7 @@ const OPPORTUNITIES: Opportunity[] = [
     imageAlt: 'Terry Fox',
   },
   {
-    id: 12,
+    id: 14,
     title: 'Grade 9 Orientation',
     date: 'Sept 2, 2025',
     description: 'SAC collaborated with FAC, PM and Arts Council for an incredible day for the Grade 9’s stepping foot into the high school world! From activities to delicious food and exciting presentations. It was all about building connections and making John Fraser feel like home!',
